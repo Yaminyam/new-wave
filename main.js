@@ -12,7 +12,7 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 //라우팅 모듈 선언
-var indexRouter = require('./routes/index');
+//var indexRouter = require('./routes/index');
 
 //request 요청 URL과 처리 로직을 선언한 라우팅 모듈 매핑
 app.use('/', indexRouter);
