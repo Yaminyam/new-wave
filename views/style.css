@@ -13,7 +13,6 @@
 
 body{
   margin: 0;
-  font-family: 'Luxurious Roman';
 }
 
 a{
@@ -30,34 +29,26 @@ a{
 }
 
 .navbar_logo{
-  font-size: 24px;
+  font-size: 40px;
   color: white;
-  padding-left: 5px;
+  padding-left: 20px;
 }
 
 .navbar_menu{
   display: flex;
   list-style: none;
   padding-left: 0;
+  font-family: 'Luxurious Roman';
+  font-size: 20px;
 }
 
 .navbar_menu li{
-  padding: 8px 30px;
+  padding: 20px 220px;
 }
 
 .navbar_menu li:hover{
   background-color: #d49466;
   border-radius: 2px;
-}
-
-.navbar_login{
-  list-style: none;
-  color: white;
-  display: flex;
-}
-
-.navbar_login li{
-padding: 8px 12px;
 }
 
 @media screen and (max-width: 768px){
