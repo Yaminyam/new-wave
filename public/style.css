@@ -1,9 +1,5 @@
 @charset "uft-8";
 :root {
-  --color1: #fff;
-  --color2: #0b1a41;
-  --color3: #000000;
-  --color4: rgba(184, 119, 169, 0.5);
 }
 
 * {
@@ -15,123 +11,70 @@
   align-items: none;
 }
 
-body {
-  height: 100vh;
+body{
+  margin: 0;
+  font-family: 'Luxurious Roman';
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.navgar{
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: linear-gradient(
-    206.78deg,
-    var(--color3) 31.87%,
-    var(--color4) 83.23%
-  );
+  background-color: #0b1a41;
+  padding: 8px 12px;
 }
 
-/* 헤더 */
-header {
-  margin-top: 50px;
-  margin-left: auto;
+.navbar_logo{
+  font-size: 24px;
+  color: white;
+  padding-left: 5px;
 }
 
-.content {
+.navbar_menu{
   display: flex;
-  flex-flow: row;
-  width: 120vh;
-  flex-direction: flex-end;
+  list-style: none;
+  padding-left: 0;
 }
 
-.header_menu {
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  position: relative;
-  flex-grow: 3;
+.navbar_menu li{
+  padding: 8px 30px;
 }
 
-.header_menu > a {
-  color: var(--color2);
-  font-weight: bold;
-  border-radius: 0px;
-  padding: 18px 36px;
-  display: inline-block;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-right: 10px;
+.navbar_menu li:hover{
+  background-color: #d49466;
+  border-radius: 2px;
 }
 
-.Login_menu {
-  flex-flow: row;
-  margin: auto 0 0 auto;
-  position: relative;
-  flex-grow: 1;
+.navbar_login{
+  list-style: none;
+  color: white;
+  display: flex;
 }
 
-.signin_btn {
-  color: var(--color2);
-  font-weight: bold;
-  border: 2px solid var(--color2);
-  border-radius: 0px;
-  padding: 18px 36px;
-  display: inline-block;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 14px;
-  letter-spacing: 1px;
-  margin-right: 10px;
-  border-radius: 3px;
+.navbar_login li{
+padding: 8px 12px;
 }
 
-.login_btn {
-  color: #fff;
-  font-weight: bold;
-  border: 2px solid var(--color2);
-  background-color: var(--color2);
-  border-radius: 0px;
-  padding: 18px 44px;
-  display: inline-block;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 14px;
-  letter-spacing: 1px;
-  border-radius: 3px;
-}
-
-/* 본문 */
-.wrapper {
-  width: 90%;
-  height: 80%;
-  margin-top: auto;
-  background-color: var(--color1);
-  position: relative;
-  outline: 15px solid var(--color2);
-  border-radius: 13px 13px 0 0;
-}
-
-@media all and (max-width: 378px) {
-  .wrapper {
-    width: 90%;
-    height: 80%;
-    margin-top: auto;
-    background-color: var(--color1);
-    position: relative;
-    outline: 5px solid var(--color2);
-    border-radius: 13px 13px 0 0;
+@media screen and (max-width: 768px){
+  .navgar{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
   }
 
-  header {
-    margin-bottom: 50px;
-    flex-direction: column-reverse;
+  .navbar_menu{
+    flex-direction:
+    align-items: center;
+    width: 100%
   }
 
-  .content {
-    display: flex;
-    flex-flow: column;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .Login_menu {
-    margin-top: 20px;
+  .navbar_menu li{
+    width: 100%;
+    text-align: center;
   }
 }
