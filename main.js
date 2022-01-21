@@ -7,6 +7,7 @@ var cors = require("cors");
 
 var indexRouter = require("./routes/index");
 var gpsRouter = require("./routes/gps");
+var chatRouter = require("./routes/chat");
 
 const sequelize = require("./database");
 const session = require("express-session");
@@ -38,6 +39,7 @@ app.use(
 );
 app.use("/", indexRouter);
 app.use("/gps", gpsRouter);
+app.use("/chat", chatRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
