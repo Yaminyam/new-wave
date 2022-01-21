@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mobile tutorial - Leaflet</title>
+  <title>Map</title>
   <meta charset="utf-8" />
 
   <!-- 모바일 페이지 최적화 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
   <style>
       html, body { height: 100%; margin: 0; padding: 0; }
@@ -20,31 +20,22 @@
 <div id='map'></div>
 
 <script>
-    /**
-     * 맵 초기화
-     *
-     * fitWorld: 메소드를 이용해서 전세계를 포함하는 최대줌 레벨로 설정한다.
-     */
     var map = L.map('map').fitWorld();
 
-    /**
-     * 맵에 타일 레이어 추가
-     */
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
             '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
             'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1
+        id:'mapbox/streets-v11',
+        maxZoom:18,
+        tileSize:512,
+        zoomOffset:-1
     }).addTo(map);
 
-    /**
-     * 사용자 위치 찾았을때 수행할 이벤트 등록
-     */
+    /** 사용자 위치 찾았을때 수행할 이벤트 등록 */
     function onLocationFound(e) {
-        var radius = e.accuracy / 2;
+
+        var radius = e.accuracy / 4;
 
         L.marker(e.latlng).addTo(map)
             .bindPopup("You are within " + radius + " meters from this point").openPopup();
@@ -53,27 +44,12 @@
     }
     map.on('locationfound', onLocationFound);
 
-    /**
-     * 사용자 위치 찾지 못했을 때 수행할 이벤트 등록
-     */
+    /** 사용자 위치 찾지 못했을 때 수행할 이벤트 등록 */
     function onLocationError(e) {
         alert(e.message);
     }
     map.on('locationerror', onLocationError);
 
-    /**
-     * 사용자 위치 설정
-     *
-     * locate 메소드
-     *   - Geolocation API를 이용하여 사용자의 위치를 찾은 후 상황에 맞게
-     *     locationfound / locationerror 이벤트를 수행한다.
-     *   - 크롬 브라우저에서 '현재위치 사용'을 허용하지 않으면 locationerror 이벤트 발생한다.
-     *   - 크롬 v50이상에서는 https를 사용하지 않으면 작동이 정상적으로 되지 않을 수 있다.
-     *
-     * Location Options
-     *   - setView (기본값 false): true 설정 시 사용자 위치를 찾으면 해당 위치로 설정, 실패 시 World(전세계) 표시
-     *   - maxZoom (기본값 Infinity): setView가 사용될 시 사용될 줌레벨
-     */
     map.locate({setView: true, maxZoom: 16});
 </script>
 </body>
