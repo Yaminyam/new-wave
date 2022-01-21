@@ -48,7 +48,13 @@ a{
 
 .navbar_menu li:hover{
   background-color: #d49466;
+  color: black;
   border-radius: 2px;
+}
+
+.iframe{
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 768px){
