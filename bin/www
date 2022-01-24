@@ -42,12 +42,18 @@ var io = new Server(server);
 io.on("connection", (socket) => {
   console.log("a user connected");
   socket.on("chat message", (msg) => {
+    console.log("chat");
     io.emit("chat message", msg);
   });
+  socket.on("New user", (location) => {
+    console.log("new user");
+    io.emit("New user", location);
+  })
   socket.on("disconnect", () => {
     console.log("user disconnected");
   });
 });
+
 
 /**
  * Normalize a port into a number, string, or false.

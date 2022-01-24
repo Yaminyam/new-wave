@@ -19,8 +19,10 @@
 
 <!-- 화면에 보여질 맵 div 요소-->
 <div id='map'></div>
-
+<script src="/socket.io/socket.io.js"></script>
 <script>
+    var socket = io();
+
     var map = L.map('map').fitWorld();
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -41,8 +43,17 @@
         L.marker(e.latlng).addTo(map).bindPopup("name").openPopup();
 
         L.circle(e.latlng, radius).addTo(map);
+
+        console.log("send e");
+        console.log(e);
+        socket.emit('New user', e.latlng);
     }
     map.on('locationfound', onLocationFound);
+
+    socket.on('New user', function(latlng) {
+        console.log("recieve");
+        L.marker(latlng).addTo(map).bindPopup("name123").openPopup();
+    });
 
     /** 사용자 위치 찾지 못했을 때 수행할 이벤트 등록 */
     function onLocationError(e) {
@@ -51,7 +62,6 @@
     map.on('locationerror', onLocationError);
 
     map.locate({setView: true, maxZoom: 16});
-
 </script>
 </body>
 </html>
