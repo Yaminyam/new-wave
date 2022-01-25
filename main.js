@@ -41,6 +41,10 @@ app.use("/", indexRouter);
 app.use("/gps", gpsRouter);
 app.use("/chat", chatRouter);
 
+//static 폴더 만들기, chat room 기능
+// app.use('/css', express.static('./static/css'))
+// app.use('/js', express.static('./static/js'))
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
