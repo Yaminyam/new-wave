@@ -54,7 +54,7 @@ io.on("connection", (socket) => {
       io.to(roomId).emit("chat message", msg);
     });
     socket.on("disconnect", () => {
-      socket.to(roomId).emit("user-disconnected", userId);
+      socket.to(roomId).emit("user-disconnected");
     });
   });
 });

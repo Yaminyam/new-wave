@@ -65,7 +65,7 @@ a{
   }
 
   .navbar_menu{
-    flex-direction:
+    flex-direction: column;
     align-items: center;
     width: 100%
   }
