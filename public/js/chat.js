@@ -13,7 +13,7 @@ socket.on("connect", function () {
   if (!name) {
     name = "익명";
   }
-  socket.emit("join-room", ROOM_ID);
+  socket.emit("join-room", ROOM_NAME);
 });
 
 form.addEventListener("submit", function (e) {

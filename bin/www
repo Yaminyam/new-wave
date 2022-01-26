@@ -44,15 +44,15 @@ io.on("connection", (socket) => {
     console.log("new user");
     socket.broadcast.emit("New user", location);
   });
-  socket.on("join-room", (roomId) => {
-    socket.join(roomId);
+  socket.on("join-room", (roomName) => {
+    socket.join(roomName);
     socket.on("chat message", (msg) => {
       console.log("chat");
-      io.to(roomId).emit("chat message", msg);
+      io.to(roomName).emit("chat message", msg);
     });
 	console.log(getActiveRooms(io));
     socket.on("disconnect", () => {
-      socket.to(roomId).emit("user-disconnected");
+      socket.to(roomName).emit("user-disconnected");
     });
   });
 });

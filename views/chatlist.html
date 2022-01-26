@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Socket.IO chat</title>
 	<script>
-		const ROOM_ID = "<%= roomId %>"
+		var ROOMS_NAME = <%- JSON.stringify(roomsName) %>
 	</script>
 	<link rel="stylesheet" type="text/css" href="/stylesheet/chatstyle.css">
 </head>
@@ -13,7 +13,7 @@
 	<ul id="rooms"></ul>
 	<button id="createRoom">generate room</button>
 	<script src="/socket.io/socket.io.js"></script>
-	<script src="/js/chat.js"></script>
+	<script src="/js/rooms.js"></script>
 </body>
 
 </html>
