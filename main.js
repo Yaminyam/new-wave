@@ -8,6 +8,7 @@ var cors = require("cors");
 var indexRouter = require("./routes/index");
 var gpsRouter = require("./routes/gps");
 var chatRouter = require("./routes/chat");
+var videoRouter = require("./routes/video");
 
 const sequelize = require("./database");
 const session = require("express-session");
@@ -40,6 +41,7 @@ app.use(
 app.use("/", indexRouter);
 app.use("/gps", gpsRouter);
 app.use("/chat", chatRouter);
+app.use("/video", videoRouter);
 
 //static 폴더 만들기, chat room 기능
 // app.use('/css', express.static('./static/css'))
