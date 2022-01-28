@@ -40,11 +40,11 @@ var io = new Server(server);
 
 io.on("connection", (socket) => {
   console.log("a user connected");
-  socket.on("New user", (location) => {
-    console.log("new user");
-    socket.broadcast.emit("New user", location);
+  socket.on("gpsNewUser", (location) => {
+    console.log("gpsNewUser");
+    socket.broadcast.emit("gpsNewUser", location);
   });
-  socket.on("join-room", (roomName) => {
+  socket.on("join-room-chat", (roomName) => {
     socket.join(roomName);
     socket.on("chat message", (msg) => {
       io.to(roomName).emit("chat message", msg);
@@ -54,7 +54,7 @@ io.on("connection", (socket) => {
       socket.to(roomName).emit("user-disconnected");
     });
   });
-  socket.on("join-room", (roomId, userId) => {
+  socket.on("join-room-video", (roomId, userId) => {
     socket.join(roomId);
     socket.to(roomId).emit("user-connected", userId);
     socket.on("disconnect", () => {

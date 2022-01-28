@@ -26,12 +26,12 @@ function onLocationFound(e) {
 
   console.log("send e");
   console.log(e);
-  socket.emit("New user", e.latlng);
+  socket.emit("gpsNewUser", e.latlng);
 }
 map.on("locationfound", onLocationFound);
 
-socket.on("New user", function (latlng) {
-  console.log("recieve");
+socket.on("gpsNewUser", function (latlng) {
+  //console.log("recieve");
   L.marker(latlng).addTo(map).bindPopup("name123").openPopup();
 });
 

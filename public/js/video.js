@@ -35,7 +35,7 @@ socket.on("user-disconnected", (userId) => {
 });
 
 mypeer.on("open", (id) => {
-  socket.emit("join-room", ROOM_ID, id);
+  socket.emit("join-room-video", ROOM_ID, id);
 });
 
 function connectToNewUser(userId, stream) {
