@@ -3,6 +3,9 @@ var rooms = document.getElementById("rooms");
 
 createRoom.addEventListener("click", function (e) {
   var roomName = prompt("방이름을 입력하세요", "");
+  if (!roomName) {
+    roomName = "익명의 방";
+  }
   location.href = "video/createRoom?roomName=" + roomName;
 });
 
