@@ -47,7 +47,6 @@ io.on("connection", (socket) => {
   socket.on("join-room", (roomName) => {
     socket.join(roomName);
     socket.on("chat message", (msg) => {
-      console.log("chat");
       io.to(roomName).emit("chat message", msg);
     });
 	console.log(getActiveRooms(io));
@@ -55,7 +54,16 @@ io.on("connection", (socket) => {
       socket.to(roomName).emit("user-disconnected");
     });
   });
+  socket.on("join-room", (roomId, userId) => {
+    socket.join(roomId);
+    socket.to(roomId).emit("user-connected", userId);
+    socket.on("disconnect", () => {
+      socket.to(roomId).emit("user-disconnected", userId);
+    });
+  });
 });
+app.set("io", io);
+
 function getActiveRooms(io) {
   // Convert map into 2D list:
   // ==> [['4ziBKG9XFS06NdtVAAAH', Set(1)], ['room1', Set(2)], ...]
