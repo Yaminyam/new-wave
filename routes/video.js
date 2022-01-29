@@ -8,7 +8,7 @@ var roomsName = {};
 });*/
 
 router.get("/", (req, res) => {
-  res.render("chatlist.html", { roomsName });
+  res.render("videolist.html", { roomsName });
 });
 
 router.get("/createroom", (req, res) => {
@@ -19,7 +19,7 @@ router.get("/createroom", (req, res) => {
 });
 
 router.get("/:room", (req, res) => {
-  res.render("chat.html", {
+  res.render("video.html", {
     roomId: req.params.room,
     roomName: roomsName[req.params.room],
   });
