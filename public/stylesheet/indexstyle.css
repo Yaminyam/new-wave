@@ -2,6 +2,7 @@
 :root {
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +32,10 @@ a{
 .navbar_logo{
   font-size: 40px;
   color: white;
-  padding-left: 20px;
+  margin-top: 10px;
+  padding-left: 0px;
+  margin-right: 5px;
+  align-items: center;
 }
 
 .navbar_menu{
@@ -39,11 +43,11 @@ a{
   list-style: none;
   padding-left: 0;
   font-family: 'Luxurious Roman';
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .navbar_menu li{
-  padding: 20px 220px;
+  padding: 20px 150px;
 }
 
 .navbar_menu li:hover{
@@ -53,8 +57,10 @@ a{
 }
 
 .iframe{
-  padding-top: 20px;
-  padding-left: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 768px){
