@@ -2,82 +2,81 @@
 :root {
 }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration-line: none;
+      align-items: none;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration-line: none;
-  align-items: none;
-}
+    body{
+      margin: 0;
+    }
 
-body{
-  margin: 0;
-}
+    a{
+      text-decoration: none;
+      color: white;
+    }
 
-a{
-  text-decoration: none;
-  color: white;
-}
+    .navgar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0b1a41;
+      padding: 8px 12px;
+    }
 
-.navgar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0b1a41;
-  padding: 8px 12px;
-}
+    .navbar_logo{
+      font-size: 40px;
+      color: white;
+      margin-top: 10px;
+      padding-left: 0px;
+      margin-right: 5px;
+      align-items: center;
+    }
 
-.navbar_logo{
-  font-size: 40px;
-  color: white;
-  margin-top: 10px;
-  padding-left: 0px;
-  margin-right: 5px;
-  align-items: center;
-}
+    .navbar_menu{
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      font-family: 'Luxurious Roman';
+      font-size: 18px;
+    }
 
-.navbar_menu{
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-  font-family: 'Luxurious Roman';
-  font-size: 18px;
-}
+    .navbar_menu li{
+      padding: 20px 150px;
+    }
 
-.navbar_menu li{
-  padding: 20px 150px;
-}
+    .navbar_menu li:hover{
+      background-color: #d49466;
+      color: black;
+      border-radius: 2px;
+    }
 
-.navbar_menu li:hover{
-  background-color: #d49466;
-  color: black;
-  border-radius: 2px;
-}
+    .iframe{
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+    }
 
-.iframe{
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-}
+    @media screen and (max-width: 768px){
+      .navgar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+      }
 
-@media screen and (max-width: 768px){
-  .navgar{
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8px 24px;
-  }
+      .navbar_menu{
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+      }
 
-  .navbar_menu{
-    flex-direction: column;
-    align-items: center;
-    width: 100%
-  }
-
-  .navbar_menu li{
-    width: 100%;
-    text-align: center;
-  }
-}
+      .navbar_menu li{
+        width: 100%;
+        text-align: center;
+      }
+    }

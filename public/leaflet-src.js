@@ -9,11 +9,9 @@
   (factory((global.L = {})));
 }(this, (function (exports) { 'use strict';
 
-  var version = "1.6.0";
+  var version = '1.6.0';
 
-  /*
-   * @namespace Util
-   *
+  /* @namespace Util
    * Various utility functions, used by Leaflet internally.
    */
 
@@ -46,13 +44,10 @@
   // Has a `L.bind()` shortcut.
   function bind(fn, obj) {
   	var slice = Array.prototype.slice;
-
   	if (fn.bind) {
   		return fn.bind.apply(fn, slice.call(arguments, 1));
   	}
-
   	var args = slice.call(arguments, 2);
-
   	return function () {
   		return fn.apply(obj, args.length ? args.concat(slice.call(arguments)) : arguments);
   	};
@@ -65,10 +60,10 @@
   // @function stamp(obj: Object): Number
   // Returns the unique ID of an object, assigning it one if it doesn't have it.
   function stamp(obj) {
-  	/*eslint-disable */
+  	// eslint-disable
   	obj._leaflet_id = obj._leaflet_id || ++lastId;
   	return obj._leaflet_id;
-  	/* eslint-enable */
+  	// eslint-enable
   }
 
   // @function throttle(fn: Function, time: Number, context: Object): Function
@@ -80,7 +75,6 @@
   // Has an `L.throttle` shortcut.
   function throttle(fn, time, context) {
   	var lock, args, wrapperFn, later;
-
   	later = function () {
   		// reset lock and call if queued
   		lock = false;
@@ -208,7 +202,6 @@
   var emptyImageUrl = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
 
   // inspired by http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-
   function getPrefixed(name) {
   	return window['webkit' + name] || window['moz' + name] || window['ms' + name];
   }
@@ -279,8 +272,6 @@
 
   // @section
   // @uninheritable
-
-  // Thanks to John Resig and Dean Edwards for inspiration!
 
   function Class() {}
 
@@ -356,7 +347,6 @@
   	return NewClass;
   };
 
-
   // @function include(properties: Object): this
   // [Includes a mixin](#class-includes) into the current class.
   Class.include = function (props) {
@@ -375,21 +365,16 @@
   // Adds a [constructor hook](#class-constructor-hooks) to the class.
   Class.addInitHook = function (fn) { // (Function) || (String, args...)
   	var args = Array.prototype.slice.call(arguments, 1);
-
   	var init = typeof fn === 'function' ? fn : function () {
   		this[fn].apply(this, args);
   	};
-
   	this.prototype._initHooks = this.prototype._initHooks || [];
   	this.prototype._initHooks.push(init);
   	return this;
   };
-
   function checkDeprecatedMixinEvents(includes) {
   	if (typeof L === 'undefined' || !L || !L.Mixin) { return; }
-
   	includes = isArray(includes) ? includes : [includes];
-
   	for (var i = 0; i < includes.length; i++) {
   		if (includes[i] === L.Mixin.Events) {
   			console.warn('Deprecated include of L.Mixin.Events: ' +
@@ -398,7 +383,6 @@
   		}
   	}
   }
-
   /*
    * @class Evented
    * @aka L.Evented
@@ -423,7 +407,6 @@
    * map.off('click', onClick);
    * ```
    */
-
   var Events = {
   	/* @method on(type: String, fn: Function, context?: Object): this
   	 * Adds a listener function (`fn`) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. `'click dblclick'`).
@@ -433,7 +416,6 @@
   	 * Adds a set of type/listener pairs, e.g. `{click: onClick, mousemove: onMouseMove}`
   	 */
   	on: function (types, fn, context) {
-
   		// types can be a map of types/handlers
   		if (typeof types === 'object') {
   			for (var type in types) {
@@ -441,7 +423,6 @@
   				// it's a hot path since Layer uses the on(obj) syntax
   				this._on(type, types[type], fn);
   			}
-
   		} else {
   			// types can be a string of space-separated words
   			types = splitWords(types);
@@ -450,7 +431,6 @@
   				this._on(types[i], fn, context);
   			}
   		}
-
   		return this;
   	},
 
@@ -466,7 +446,6 @@
   	 * Removes all listeners to all events on the object. This includes implicitly attached events.
   	 */
   	off: function (types, fn, context) {
-
   		if (!types) {
   			// clear all listeners if called without arguments
   			delete this._events;
@@ -475,43 +454,36 @@
   			for (var type in types) {
   				this._off(type, types[type], fn);
   			}
-
   		} else {
   			types = splitWords(types);
-
   			for (var i = 0, len = types.length; i < len; i++) {
   				this._off(types[i], fn, context);
   			}
   		}
-
   		return this;
   	},
 
   	// attach listener (without syntactic sugar now)
   	_on: function (type, fn, context) {
   		this._events = this._events || {};
-
-  		/* get/init listeners for type */
+  		// get/init listeners for type
   		var typeListeners = this._events[type];
   		if (!typeListeners) {
   			typeListeners = [];
   			this._events[type] = typeListeners;
   		}
-
   		if (context === this) {
   			// Less memory footprint.
   			context = undefined;
   		}
   		var newListener = {fn: fn, ctx: context},
   		    listeners = typeListeners;
-
   		// check if fn already there
   		for (var i = 0, len = listeners.length; i < len; i++) {
   			if (listeners[i].fn === fn && listeners[i].ctx === context) {
   				return;
   			}
   		}
-
   		listeners.push(newListener);
   	},
 

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset='utf-8'>
 	<title>Socket.IO chat</title>
 	<script>
-		const ROOM_ID = "<%= roomId %>"
-		const ROOM_NAME = "<%= roomName %>"
+		const ROOM_ID = '<%= roomId %>'
+		const ROOM_NAME = '<%= roomName %>'
 	</script>
-	<link rel="stylesheet" type="text/css" href="/stylesheet/chatstyle.css">
+	<link rel='stylesheet' type='text/css' href='/stylesheet/chatstyle.css'>
 </head>
 <body>
-	<ul id="messages"></ul>
-	<form id="form" action="">
-		<input id="input" autocomplete="off" /><button>Send</button>
+	<ul id='messages'></ul>
+	<form id='form' action=''>
+		<input id='input' autocomplete='off' /><button>Send</button>
 	</form>
-	<script src="/socket.io/socket.io.js"></script>
-	<script src="/js/chat.js"></script>
+	<script src='/socket.io/socket.io.js'></script>
+	<script src='/js/chat.js'></script>
 </body>
 </html>

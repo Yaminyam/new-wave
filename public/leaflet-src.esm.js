@@ -3,13 +3,11 @@
  * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
-var version = "1.6.0";
+var version = '1.6.0';
 
-/*
- * @namespace Util
- *
- * Various utility functions, used by Leaflet internally.
- */
+// @namespace Util
+// Various utility functions, used by Leaflet internally.
+
 
 // @function extend(dest: Object, src?: Object): Object
 // Merges the properties of the `src` object (or multiple objects) into `dest` object and returns the latter. Has an `L.extend` shortcut.
@@ -59,10 +57,10 @@ var lastId = 0;
 // @function stamp(obj: Object): Number
 // Returns the unique ID of an object, assigning it one if it doesn't have it.
 function stamp(obj) {
-	/*eslint-disable */
+	//eslint-disable
 	obj._leaflet_id = obj._leaflet_id || ++lastId;
 	return obj._leaflet_id;
-	/* eslint-enable */
+	// eslint-enable
 }
 
 // @function throttle(fn: Function, time: Number, context: Object): Function
@@ -274,8 +272,6 @@ var Util = ({
 // @section
 // @uninheritable
 
-// Thanks to John Resig and Dean Edwards for inspiration!
-
 function Class() {}
 
 Class.extend = function (props) {
@@ -485,7 +481,7 @@ var Events = {
 	_on: function (type, fn, context) {
 		this._events = this._events || {};
 
-		/* get/init listeners for type */
+		// get/init listeners for type
 		var typeListeners = this._events[type];
 		if (!typeListeners) {
 			typeListeners = [];
@@ -1314,8 +1310,6 @@ LatLngBounds.prototype = {
 	}
 };
 
-// TODO International date line?
-
 // @factory L.latLngBounds(corner1: LatLng, corner2: LatLng)
 // Creates a `LatLngBounds` object by defining two diagonally opposite corners of the rectangle.
 
@@ -1746,10 +1740,9 @@ function toTransformation(a, b, c, d) {
 	return new Transformation(a, b, c, d);
 }
 
-/*
- * @namespace CRS
- * @crs L.CRS.EPSG3857
+/* @namespace CRS
  *
+ * @crs L.CRS.EPSG3857
  * The most common CRS for online maps, used by almost all free and commercial
  * tile providers. Uses Spherical Mercator projection. Set in by default in
  * Map's `crs` option.
@@ -2000,9 +1993,8 @@ var Browser = ({
   vml: vml
 });
 
-/*
- * Extends L.DomEvent to provide touch support for Internet Explorer and Windows-based devices.
- */
+// Extends L.DomEvent to provide touch support for Internet Explorer and Windows-based devices.
+
 
 
 var POINTER_DOWN =   msPointer ? 'MSPointerDown'   : 'pointerdown';
@@ -2098,7 +2090,6 @@ function _handlePointer(e, handler) {
 
 function _addPointerMove(obj, handler, id) {
 	var onMove = function (e) {
-		// don't fire touch moves when mouse isn't down
 		if ((e.pointerType === (e.MSPOINTER_TYPE_MOUSE || 'mouse')) && e.buttons === 0) {
 			return;
 		}
@@ -2120,9 +2111,8 @@ function _addPointerEnd(obj, handler, id) {
 	obj.addEventListener(POINTER_CANCEL, onUp, false);
 }
 
-/*
- * Extends the event handling code with double tap support for mobile browsers.
- */
+// Extends the event handling code with double tap support for mobile browsers.
+
 
 var _touchstart = msPointer ? 'MSPointerDown' : pointer ? 'pointerdown' : 'touchstart';
 var _touchend = msPointer ? 'MSPointerUp' : pointer ? 'pointerup' : 'touchend';
@@ -2576,10 +2566,9 @@ var DomUtil = ({
   getScale: getScale
 });
 
-/*
- * @namespace DomEvent
- * Utility functions to work with the [DOM events](https://developer.mozilla.org/docs/Web/API/Event), used by Leaflet internally.
- */
+// @namespace DomEvent
+// Utility functions to work with the [DOM events](https://developer.mozilla.org/docs/Web/API/Event), used by Leaflet internally.
+
 
 // Inspired by John Resig, Dean Edwards and YUI addEvent implementations.
 
@@ -2642,7 +2631,6 @@ function off(obj, types, fn, context) {
 }
 
 function browserFiresNativeDblClick() {
-	// See https://github.com/w3c/pointerevents/issues/171
 	if (pointer) {
 		return !(edge || safari);
 	}
@@ -3682,11 +3670,9 @@ var Map = Evented.extend({
 
 		// @event locationfound: LocationEvent
 		// Fired when geolocation (using the [`locate`](#map-locate) method)
-		// went successfully.
 		this.fire('locationfound', data);
 	},
 
-	// TODO Appropriate docs section?
 	// @section Other Methods
 	// @method addHandler(name: String, HandlerClass: Function): this
 	// Adds a new `Handler` to the map, given its name and constructor function.
@@ -3720,9 +3706,9 @@ var Map = Evented.extend({
 			delete this._container._leaflet_id;
 			delete this._containerId;
 		} catch (e) {
-			/*eslint-disable */
+			// eslint-disable
 			this._container._leaflet_id = undefined;
-			/* eslint-enable */
+			// eslint-enable
 			this._containerId = undefined;
 		}
 
