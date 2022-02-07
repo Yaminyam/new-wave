@@ -1,19 +1,19 @@
-var createRoom = document.getElementById("createRoom");
-var rooms = document.getElementById("rooms");
+var createRoom = document.getElementById('createRoom');
+var rooms = document.getElementById('rooms');
 
-createRoom.addEventListener("click", function (e) {
-  var roomName = prompt("방이름을 입력하세요", "");
+createRoom.addEventListener('click', function (e) {
+  var roomName = prompt('방이름을 입력하시오.', '');
   if (!roomName) {
-    roomName = "익명의 방";
+    roomName = 'anonymity';
   }
-  location.href = "video/createRoom?roomName=" + roomName;
+  location.href = 'video/createRoom?roomName=' + roomName;
 });
 
 for (let roomId in ROOMS_NAME) {
   var roomName = ROOMS_NAME[roomId];
-  var item = document.createElement("li");
+  var item = document.createElement('li');
   item.textContent = `${roomName}`;
-  item.addEventListener("click", function (e) {
+  item.addEventListener('click', function (e) {
     location.href = `video/${roomId}`;
   });
   rooms.appendChild(item);
