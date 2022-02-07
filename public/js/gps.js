@@ -16,7 +16,7 @@ L.tileLayer(
   }
 ).addTo(map);
 
-// 사용자 위치 찾았을때 수행할 이벤트 등록
+// register event when server found user's location
 function onLocationFound(e) {
   var radius = e.accuracy * 3;
 
@@ -30,15 +30,16 @@ function onLocationFound(e) {
 }
 map.on('locationfound', onLocationFound);
 
+// receive new user information and mark a location
 socket.on('gpsNewUser', function (latlng) {
-  // console.log("recieve");
   L.marker(latlng).addTo(map).bindPopup('name123').openPopup();
 });
 
-// 사용자 위치 찾지 못했을 때 수행할 이벤트 등록
+// register event when server couldn't find user's location
 function onLocationError(e) {
   alert(e.message);
 }
 map.on('locationerror', onLocationError);
 
+//zoom in and zoom out on the map
 map.locate({ setView: true, maxZoom: 16 });

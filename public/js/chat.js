@@ -1,10 +1,13 @@
+
 var socket = io();
 
 var messages = document.getElementById('messages');
 var form = document.getElementById('form');
 var input = document.getElementById('input');
+
 var name = '';
-// 접속 되었을 때 실행
+
+// perform when anyone connect
 socket.on('connect', function () {
   name = prompt('반갑습니다!', '');
   if (!name) {
@@ -13,6 +16,7 @@ socket.on('connect', function () {
   socket.emit('join-room-chat', ROOM_ID);
 });
 
+// set message event to form
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   if (input.value) {
@@ -21,6 +25,7 @@ form.addEventListener('submit', function (e) {
   }
 });
 
+// make chat list
 socket.on('chat message', function (msg) {
   var item = document.createElement('li');
   item.textContent = `${msg.name}: ${msg.message}`;
