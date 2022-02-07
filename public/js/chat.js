@@ -7,7 +7,7 @@ var input = document.getElementById('input');
 
 var name = '';
 
-// perform when anyone connect
+// perform when user connected
 socket.on('connect', function () {
   name = prompt('반갑습니다!', '');
   if (!name) {
