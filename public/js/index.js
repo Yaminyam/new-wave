@@ -20,10 +20,10 @@ video.addEventListener('click', function (e) {
 // Get user authorization permission 
 Notification.requestPermission();
 
-// 알림 내용
-//alarm content
-new Notification("Alarm", {body:'Someone needs help'});
+// // 알림 내용
+// //alarm content
+// new Notification("Alarm", {body:'Someone needs help'});
 
-createRoom.addEventListener('click', function (e) {
+Alarm.addEventListener('click', function (e) {
 	new Notification("Alarm", {body:'Someone needs help'});
   });
