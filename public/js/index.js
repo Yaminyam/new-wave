@@ -20,10 +20,10 @@ video.addEventListener('click', function (e) {
 // Get user authorization permission 
 Notification.requestPermission();
 
-// // 알림 내용
-// //alarm content
-// new Notification("Alarm", {body:'Someone needs help'});
-
+// 알림 내용
+//alarm content
 Alarm.addEventListener('click', function (e) {
 	new Notification("Alarm", {body:'Someone needs help'});
+	//4초있다가 꺼질 것임
+	setTimeout(notification.close.bind(notification), 4000);
   });
