@@ -25,12 +25,16 @@ Establishment Wireless Intranet Network and Development Web Application for Disa
     * Sign out
 
  * GPS
+    * Need user administration
     * Show people's current location
-    * Emergency location notification
 
  * Chat & Video Call
     * Room
     * Name setting
+
+* Alarm
+   * Need user administration
+   * Emergency location notification
 
 
 #### Management Features
