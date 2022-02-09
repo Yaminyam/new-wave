@@ -20,6 +20,16 @@
       color: white;
     }
 
+    .buttonStyle{
+      border-radius: 30px;
+      font-size: 30px;
+      margin-left: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: #b01e1e;
+      border-color: #b01e1e;
+    }
+
     .navgar{
       display: flex;
       justify-content: space-between;
@@ -34,6 +44,7 @@
       margin-top: 10px;
       padding-left: 0px;
       margin-right: 5px;
+      margin-left: 20px;
       align-items: center;
     }
 
@@ -42,11 +53,11 @@
       list-style: none;
       padding-left: 0;
       font-family: 'Luxurious Roman';
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .navbar_menu li{
-      padding: 20px 150px;
+      padding: 20px 100px;
     }
 
     .navbar_menu li:hover{
