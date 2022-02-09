@@ -30,20 +30,20 @@ Alarm.addEventListener('click', function (e) {
 	//클릭 이벤트
 	notification.addEventListener("click", function (event) {
 		alert("onClick!");
-		event.preventDefault();
+		//event.preventDefault();
 		console.log('Notification clicked.');
 	})
-	
+
 	//알림 클릭시 페이지 연동
 	notification.onclick = function(event) {
-		event.preventDefault(); // prevent the browser from focusing the Notification's tab
+		//event.preventDefault(); // prevent the browser from focusing the Notification's tab
 		window.open('http://www.mozilla.org', '_blank');
 	  }
-
+	  
 	//닫힘 이벤트 
 	notification.addEventListener("close", function (event) {
 		alert("onClose!");
-		event.preventDefault();
+		//event.preventDefault();
 		console.log('Notification clicked.');
 	})
   });
