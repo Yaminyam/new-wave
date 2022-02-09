@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Socket.IO chat</title>
+	<script>
+		var ROOMS_NAME = <%- JSON.stringify(roomsName) %>
+	</script>
+	<link rel='stylesheet' type='text/css' href='/stylesheet/chatlistStyle.css'>
+</head>
+<body>
+	<ul id='rooms'></ul>
+	<button id='createRoom' class='buttonStyle'>Generate Room</button>
+	<script src='/socket.io/socket.io.js'></script>
+	<script src='/js/chatrooms.js'></script>
+</body>
+</html>
