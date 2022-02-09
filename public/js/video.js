@@ -38,19 +38,19 @@ navigator.mediaDevices
   });
 
 //유저 연결안될 때
-//perform when user disconnected
+// Perform when user disconnected
 socket.on('user-disconnected', (userId) => {
   if (peers[userId]) peers[userId].close();
 });
 
 //유저 연결시
-//perform when user connected
+// Perform when user connected
 mypeer.on('open', (id) => {
   socket.emit('join-room-video', ROOM_ID, id);
 });
 
 //새로운 유저 연결하는 기능
-//connect new user to an existing user
+// Connect new user to an existing user
 function connectToNewUser(userId, stream) {
   const call = mypeer.call(userId, stream);
   const video = document.createElement('video');
@@ -64,7 +64,7 @@ function connectToNewUser(userId, stream) {
 }
 
 //영상 송출 기능
-//video transmission
+// Video transmission
 function addVideoStream(video, stream) {
   video.srcObject = stream;
   video.addEventListener('loadedmetadata', () => {

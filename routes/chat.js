@@ -8,7 +8,7 @@ var roomsName = {};
 });*/
 
 //채팅방 이름 설정
-//Set chat room name
+// Set chat room name
 router.get("/", (req, res) => {
   var io = req.app.get("io");
   var rooms = getActiveRooms(io);
@@ -28,7 +28,7 @@ router.get("/", (req, res) => {
 
 
 //채팅방 생성
-//Create chat room
+// Create chat room
 router.get("/createroom", (req, res) => {
   var roomId = uuidV4();
   roomsName[roomId] = req.query.roomName;
@@ -37,7 +37,7 @@ router.get("/createroom", (req, res) => {
 });
 
 //채팅방 html과 연결
-//Connect to chat.html
+// Connect to chat.html
 router.get("/:room", (req, res) => {
   res.render("chat.html", {
     roomId: req.params.room,
@@ -46,7 +46,7 @@ router.get("/:room", (req, res) => {
 });
 
 //채팅방 리스트 생성
-//Make room list
+// Make room list
 function getActiveRooms(io) {
   // Convert map into 2D list:
   // ==> [['4ziBKG9XFS06NdtVAAAH', Set(1)], ['room1', Set(2)], ...]
