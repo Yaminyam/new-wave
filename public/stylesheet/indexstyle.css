@@ -20,10 +20,10 @@
       color: white;
     }
 
-    .buttonStyle{
+    .sosButton{
       border-radius: 30px;
       font-size: 30px;
-      margin-left: 30px;
+      margin-left: 95px;
       padding-left: 10px;
       padding-right: 10px;
       background-color: #b01e1e;
@@ -39,21 +39,17 @@
     }
 
     .navbar_logo{
+      padding-top: 10px;
+      margin-left: -10px;
       font-size: 40px;
       color: white;
-      margin-top: 10px;
-      padding-left: 0px;
-      margin-right: 5px;
-      margin-left: 20px;
-      align-items: center;
     }
 
     .navbar_menu{
       display: flex;
       list-style: none;
-      padding-left: 0;
       font-family: 'Luxurious Roman';
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .navbar_menu li{
