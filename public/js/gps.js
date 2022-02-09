@@ -24,8 +24,6 @@ function onLocationFound(e) {
 
   L.circle(e.latlng, radius).addTo(map);
 
-  console.log('send e');
-  console.log(e);
   socket.emit('gpsNewUser', e.latlng);
 }
 map.on('locationfound', onLocationFound);
