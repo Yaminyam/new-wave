@@ -48,7 +48,7 @@ Establishment Wireless Intranet Network and Development Web Application for Disa
 
 
 
-#### Python-hitchhiker Web UI is built with
+#### new-wave Web UI is built with
  * `npm` as package manager
 
 #### If you don't have a remote server yet...
