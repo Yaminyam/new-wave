@@ -8,7 +8,7 @@ var name = '';
 
 // Perform when user connected
 socket.on('connect', function () {
-  name = prompt('반갑습니다!', '');
+  name = prompt('your name', '');
   if (!name) {
     name = 'anonymity';
   }
@@ -31,3 +31,5 @@ socket.on('chat message', function (msg) {
   messages.appendChild(item);
   window.scrollTo(0, document.body.scrollHeight);
 });
+
+export default name;
