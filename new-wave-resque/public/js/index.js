@@ -40,19 +40,3 @@ function notifyMe() {
 	  });
 	}
 }
-
-const marker = new L.marker(lastPoint, {
-        icon: markerIconSnake
-      }).bindPopup(getDataInHtml(dataPopup), {
-        className: 'stylePopup'
-      });
-
-const updatePopupCss = (color) => {
-    let popupElement = document.getElementsByClassName("leaflet-popup-content-wrapper");
-    let htmlPopupElement;
-    if (popupElement[0] instanceof HTMLElement) {
-        htmlPopupElement = popupElement[0] as HTMLElement;
-        htmlPopupElement.style.backgroundColor = color;
-        console.log(htmlPopupElement)
-    }
-}
