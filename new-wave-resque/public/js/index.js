@@ -27,7 +27,7 @@ function notifyMe() {
 	  var notification = new Notification("Someone needs help!");
 	  notification.onclick = function(event){
 		event.preventDefault(); // prevent the browser from focusing the Notification's tab
-		window.open('https://www.naver.com/', '_blank');
+		window.open('/', '_blank');
 
 		setTimeout(notification.close.bind(notification), 4000);
 	  }
