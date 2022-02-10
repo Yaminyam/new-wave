@@ -22,13 +22,12 @@ function notifyMe() {
 	if (!("Notification" in window)) {
 	  alert("This browser does not support desktop notification");
 	}
-
 	else if (Notification.permission === "granted") {
+
 	  var notification = new Notification("Someone needs help!");
 	  notification.onclick = function(event){
 		event.preventDefault(); // prevent the browser from focusing the Notification's tab
 		window.open('/', '_blank');
-
 		setTimeout(notification.close.bind(notification), 4000);
 	  }
 	}
@@ -40,4 +39,20 @@ function notifyMe() {
 		}
 	  });
 	}
+}
+
+const marker = new L.marker(lastPoint, {
+        icon: markerIconSnake
+      }).bindPopup(getDataInHtml(dataPopup), {
+        className: 'stylePopup'
+      });
+
+const updatePopupCss = (color) => {
+    let popupElement = document.getElementsByClassName("leaflet-popup-content-wrapper");
+    let htmlPopupElement;
+    if (popupElement[0] instanceof HTMLElement) {
+        htmlPopupElement = popupElement[0] as HTMLElement;
+        htmlPopupElement.style.backgroundColor = color;
+        console.log(htmlPopupElement)
+    }
 }
