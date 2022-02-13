@@ -31,5 +31,3 @@ socket.on('chat message', function (msg) {
   messages.appendChild(item);
   window.scrollTo(0, document.body.scrollHeight);
 });
-
-export default name;
