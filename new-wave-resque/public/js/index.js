@@ -2,7 +2,7 @@ var messages = document.getElementById('msg');
 var gps = document.getElementById('map');
 var page = document.getElementById('page');
 var video = document.getElementById('video');
-var Alarm = document.getElementById('Alarm');
+var alarm = document.getElementById('alarm');
 
 // On click, change page
 messages.addEventListener('click', function (e) {
