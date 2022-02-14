@@ -17,6 +17,8 @@ video.addEventListener('click', function (e) {
 	page.src = '/video';
 });
 
+alarm.addEventListener('click', notifyMe);
+
 // On click, execute sos button
 function notifyMe() {
 	if (!("Notification" in window)) {
