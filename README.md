@@ -86,7 +86,7 @@ Thanks go to these wonderful people :
        -masterpil@jejunu.ac.kr
        -https://github.com/masterpil
       
-    👰Juhyun Kim
+    🧘‍♀️Juhyun Kim
        -Jeju National University
        -Major in Business Administrate Information
        -990001@stu.jejunu.ac.kr
@@ -118,5 +118,6 @@ Thanks go to these wonderful people :
        
     🧔🏻Alec Head
        -Purdue University
-       -Major in CNIT
-       -carmelo15andonly@gmail.com 
+       -Major in Systems Analysis & Design, Minor in Economics
+       -head12@purdue.edu
+       -https://github.com/alechead
