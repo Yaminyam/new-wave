@@ -1,16 +1,15 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
-var { v4: uuidV4 } = require("uuid");
+var { v4: uuidV4 } = require('uuid');
 var roomsName = {};
 
 /*router.get("/", (req, res) => {
   res.redirect(`chat/${uuidV4()}`);
 });*/
 
-//채팅방 이름 설정
 // Set chat room name
-router.get("/", (req, res) => {
-  var io = req.app.get("io");
+router.get('/', (req, res) => {
+  var io = req.app.get('io');
   var rooms = getActiveRooms(io);
   console.log(io.sockets.adapter.rooms);
   console.log(rooms);
@@ -20,26 +19,23 @@ router.get("/", (req, res) => {
       newRoomsName[roomId] = roomsName[roomId];
     }
   }
-  console.log("newRooms");
+  console.log('newRooms');
   console.log(newRoomsName);
   roomsName = newRoomsName;
-  res.render("chatlist.html", { roomsName });
+  res.render('chatlist.html', { roomsName });
 });
 
-
-//채팅방 생성
 // Create chat room
-router.get("/createroom", (req, res) => {
+router.get('/createroom', (req, res) => {
   var roomId = uuidV4();
   roomsName[roomId] = req.query.roomName;
   console.log(roomsName);
   res.redirect(`${roomId}`);
 });
 
-//채팅방 html과 연결
 // Connect to chat.html
-router.get("/:room", (req, res) => {
-  res.render("chat.html", {
+router.get('/:room', (req, res) => {
+  res.render('chat.html', {
     roomId: req.params.room,
     roomName: roomsName[req.params.room],
   });
