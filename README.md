@@ -88,7 +88,7 @@ Thanks go to these wonderful people :
       
     🧘‍♀️Juhyun Kim
        -Jeju National University
-       -Major in Business Administrate Information
+       -Major in Management Information Systems
        -990001@stu.jejunu.ac.kr
        -https://github.com/juhyun9
        
