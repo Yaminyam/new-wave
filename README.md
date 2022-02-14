@@ -78,41 +78,43 @@ Thanks go to these wonderful people :
        -Chungnam National University
        -Major in Computer Science and Engineering
        -siontama@gmail.com
-       -https://github.com/yaminyam
+       -https://github.com/Yaminyam
        
     🎅🏻Pilkyo Kim
        -Jeju National University
-       -Major in Computer Science Engineering
+       -Major in Computer Education
        -masterpil@jejunu.ac.kr
-       -https://github.com/kimminje0ng
+       -https://github.com/masterpil
       
     👰Juhyun Kim
        -Jeju National University
-       -Major in Computer Science Engineering
+       -Major in Business Administrate Information
        -990001@stu.jejunu.ac.kr
-       -https://github.com/zihos
+       -https://github.com/juhyun9
        
     👩‍🚀Yijun Yoo
        -Jeju National University
-       -Major in CNIT
+       -Major in Housing & Family Welfare (Faculty of Human Ecology & Welfare)
        -uyijune15@gmail.com
-       -https://github.com/dplok1
+       -https://github.com/yooyijun15
     
     👨🏻‍🦱Jihoon Yang
        -Jeju National University
-       -Major in CNIT
+       -Major in Computer Education
        -jhy0787@gmail.com
-       -https://github.com/damien7749
+       -https://github.com/jhy0787
     
     👨🏻‍💼Haeeun Ok
        -Jeju National University
-       -Major in CNIT
-       -okaysilver@jejunu.ac.kr
+       -Major in Computer Engineering
+       -dhrgodms123@gmail.com
+       -https://github.com/dhrgodms
     
     🧔🏻Hyewon Koh
        -Jeju National University
-       -Major in CNIT
+       -Major in Computer Science & Statistics
        -khw160929@jejunu.ac.kr
+       -https://github.com/Hyewon-Koh
        
     🧔🏻Alec Head
        -Purdue University
