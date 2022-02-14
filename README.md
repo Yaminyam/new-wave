@@ -74,7 +74,7 @@ $ npm run dev
 
 Thanks go to these wonderful people :
 
-   🍭Sion Kang
+    🍭Sion Kang
        -Chungnam National University
        -Major in Computer Science and Engineering
        -siontama@gmail.com
