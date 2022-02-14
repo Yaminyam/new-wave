@@ -1,36 +1,36 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
-var cors = require("cors");
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var cors = require('cors');
 
-var indexRouter = require("./routes/index");
-var gpsRouter = require("./routes/gps");
-var chatRouter = require("./routes/chat");
-var videoRouter = require("./routes/video");
+var indexRouter = require('./routes/index');
+var gpsRouter = require('./routes/gps');
+var chatRouter = require('./routes/chat');
+var videoRouter = require('./routes/video');
 
-const sequelize = require("./database");
-const session = require("express-session");
-var SequelizeStore = require("connect-session-sequelize")(session.Store);
+const sequelize = require('./database');
+const session = require('express-session');
+var SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 var app = express();
 
-sequelize.sync({}).then(() => console.log("db is ready"));
+sequelize.sync({}).then(() => console.log('db is ready'));
 
-app.set("view engine", "ejs");
-app.engine("html", require("ejs").renderFile);
-app.use(logger("dev"));
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 app.use(cors());
 
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: 'keyboard cat',
     store: new SequelizeStore({
       db: sequelize,
     }),
@@ -38,10 +38,10 @@ app.use(
     saveUninitialized: true,
   })
 );
-app.use("/", indexRouter);
-app.use("/gps", gpsRouter);
-app.use("/chat", chatRouter);
-app.use("/video", videoRouter);
+app.use('/', indexRouter);
+app.use('/gps', gpsRouter);
+app.use('/chat', chatRouter);
+app.use('/video', videoRouter);
 
 // Make static folder, chat room functon
 
@@ -55,7 +55,7 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
   // Set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get("env") === "development" ? err : {};
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // Render the error page
   res.status(err.status || 500)

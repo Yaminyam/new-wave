@@ -66,10 +66,9 @@ $ npm install
 $ npm audit fix #It can occur errors, but don't worry. The command below will solve it!
 $ npm run start
 ```
- 
+
 #### Developing and testing without bundling
 
 ```
 $ npm run dev
 ```
-
