@@ -4,8 +4,6 @@ Establishment Wireless Intranet Network and Development Web Application for Disa
 
 ### Network System Overview
 
-<img width="454" alt="image" src="https://user-images.githubusercontent.com/31057849/153922523-8b3a008c-426f-49d2-a963-04bd2e86b153.png">
-
 <img width="454" alt="image" src="https://user-images.githubusercontent.com/96998861/153928587-075d5f57-6551-43a3-bc1e-b455fd256bee.png">
 
 ## 📌 Role
