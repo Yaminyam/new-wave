@@ -1,7 +1,6 @@
 body {
 			margin: 0;
 			padding-bottom: 3rem;
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 		}
 
 		#rooms>li:nth-child(even) {
@@ -31,14 +30,12 @@ body {
 		  border-radius: 5px;
 		}
 
-    @import url(https://fonts.googleapis.com/css?family=BenchNine:700);
     .buttonStyle {
       background-color: #0b1a41;
       border: none;
       color: #ffffff;
       cursor: pointer;
       display: inline-block;
-      font-family: 'BenchNine', Arial, sans-serif;
       font-size: 1em;
       font-size: 15px;
       line-height: 1em;
