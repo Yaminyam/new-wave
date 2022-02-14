@@ -2,6 +2,8 @@ var socket = io();
 
 var map = L.map('map').fitWorld();
 
+var alarm = document.getElementById('alarm');
+
 L.tileLayer(
   'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
   {
@@ -42,3 +44,34 @@ map.on('locationerror', onLocationError);
 
 // Zoom in, Zoom out on the map
 map.locate({ setView: true, maxZoom: 16 });
+
+// Add event to button
+alarm.addEventListener('click', () => {
+  //일단 alert라는 이름의 아무것도 없는 정보 서버에 보내기
+  console.log('1');
+  socket.emit('alertNotification','click');
+});
+
+socket.on('alert',notifyMe);
+// On click, execute sos button
+function notifyMe() {
+	if (!("Notification" in window)) {
+	  alert("This browser does not support desktop notification");
+	}
+	else if (Notification.permission === "granted") {
+	  var notification = new Notification("Someone needs help!");
+	  notification.onclick = function(event){
+      event.preventDefault(); // prevent the browser from focusing the Notification's tab
+      window.open('/', '_blank');
+      setTimeout(notification.close.bind(notification), 4000);
+	  }
+	}
+	else if (Notification.permission !== "denied") {
+	  Notification.requestPermission().then(function (permission) {
+		if (permission === "granted") {
+		  var notification = new Notification("Someone needs help!");
+		}
+	  });
+	}
+}
+

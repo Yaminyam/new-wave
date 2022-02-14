@@ -49,15 +49,19 @@ io.on("connection", (socket) => {
     socket.on("chat message", (msg) => {
       io.to(roomName).emit("chat message", msg);
     });
-	console.log(getActiveRooms(io));
+    console.log(getActiveRooms(io));
     socket.on("disconnect", () => {
       socket.to(roomName).emit("user-disconnected");
     });
   });
+  socket.on("alertNotification", (df) => {
+    console.log("send alert notification");
+    socket.emit("alert");
+  });
   socket.on("join-room-video", (roomId, userId) => {
     socket.join(roomId);
     socket.to(roomId).emit("user-connected", userId);
-	console.log(getActiveRooms(io));
+    console.log(getActiveRooms(io));
     socket.on("disconnect", () => {
       socket.to(roomId).emit("user-disconnected", userId);
     });

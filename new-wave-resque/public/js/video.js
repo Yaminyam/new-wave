@@ -14,7 +14,6 @@ const myvideo = document.createElement('video');
 myvideo.muted = true;
 const peers = {};
 
-//미디어 입력 장치에 접근
 // Access to media input device
 navigator.mediaDevices
   .getUserMedia({
@@ -37,20 +36,18 @@ navigator.mediaDevices
     });
   });
 
-//유저 연결안될 때
-// Perform when user disconnected
+// user out of the chat-room
 socket.on('user-disconnected', (userId) => {
   if (peers[userId]) peers[userId].close();
 });
 
-//유저 연결시
-// Perform when user connected
+
+// user connected room
 mypeer.on('open', (id) => {
   socket.emit('join-room-video', ROOM_ID, id);
 });
 
-//새로운 유저 연결하는 기능
-// Connect new user to an existing user
+// add video to others
 function connectToNewUser(userId, stream) {
   const call = mypeer.call(userId, stream);
   const video = document.createElement('video');
@@ -63,8 +60,7 @@ function connectToNewUser(userId, stream) {
   peers[userId] = call;
 }
 
-//영상 송출 기능
-// Video transmission
+// Video connection
 function addVideoStream(video, stream) {
   video.srcObject = stream;
   video.addEventListener('loadedmetadata', () => {
