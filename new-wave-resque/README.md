@@ -75,6 +75,7 @@ $ npm run dev
 ## 🤩 Contributors
 
 Thanks go to these wonderful people :
+
     👩‍💻Sion Kang
        -Chungnam National University
        -Major in Computer Science and Engineering
