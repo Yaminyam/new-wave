@@ -2,11 +2,9 @@
 
 Establishment Wireless Intranet Network and Development Web Application for Disaster Areas  Using Balloons
 
-</br>
+### Network System Overview
 
-<img width="454" alt="image" src="https://user-images.githubusercontent.com/31057849/153922523-8b3a008c-426f-49d2-a963-04bd2e86b153.png"
-
-</br>
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/31057849/153922523-8b3a008c-426f-49d2-a963-04bd2e86b153.png">
 
 ## 📌 Role
 
