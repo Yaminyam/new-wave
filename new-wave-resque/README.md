@@ -51,7 +51,6 @@ Establishment Wireless Intranet Network and Development Web Application for Disa
 ## 💡 Setup Guide
 
 
-
 #### new-wave Web UI is built with
  * `npm` as package manager
 
@@ -72,3 +71,51 @@ $ npm run start
 ```
 $ npm run dev
 ```
+
+## 🤩 Contributors
+
+Thanks go to these wonderful people :
+    👩‍💻Sion Kang
+       -Chungnam National University
+       -Major in Computer Science and Engineering
+       -siontama@gmail.com
+       -https://github.com/yaminyam
+       
+    🎅🏻Pilkyo Kim
+       -Jeju National University
+       -Major in Computer Science Engineering
+       -masterpil@jejunu.ac.kr
+       -https://github.com/kimminje0ng
+      
+    👰Juhyun Kim
+       -Jeju National University
+       -Major in Computer Science Engineering
+       -990001@stu.jejunu.ac.kr
+       -https://github.com/zihos
+       
+    👩‍🚀Yijun Yoo
+       -Jeju National University
+       -Major in CNIT
+       -uyijune15@gmail.com
+       -https://github.com/dplok1
+    
+    👨🏻‍🦱Jihoon Yang
+       -Jeju National University
+       -Major in CNIT
+       -jhy0787@gmail.com
+       -https://github.com/damien7749
+    
+    👨🏻‍💼Haeeun Ok
+       -Jeju National University
+       -Major in CNIT
+       -okaysilver@jejunu.ac.kr
+    
+    🧔🏻Hyewon Koh
+       -Jeju National University
+       -Major in CNIT
+       -khw160929@jejunu.ac.kr
+       
+    🧔🏻Alec Head
+       -Purdue University
+       -Major in CNIT
+       -carmelo15andonly@gmail.com 
