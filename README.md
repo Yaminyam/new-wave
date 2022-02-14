@@ -116,7 +116,8 @@ Thanks go to these wonderful people :
        -khw160929@jejunu.ac.kr
        -https://github.com/Hyewon-Koh
        
-    🧔🏻Alec Head
+       
+    🙋🏻‍♂️Alec Head
        -Purdue University
        -Major in Systems Analysis & Design, Minor in Economics
        -head12@purdue.edu
