@@ -54,6 +54,10 @@ io.on("connection", (socket) => {
       socket.to(roomName).emit("user-disconnected");
     });
   });
+  socket.on('gps_ID', (name) => {
+    console.log('send gps name')
+      socket.broadcast.emit('gps_ID');
+  });
   socket.on("alertNotification", (df) => {
     console.log("send alert notification");
     socket.emit("alert");
