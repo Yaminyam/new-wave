@@ -12,7 +12,7 @@ A loss of communication network is a big issue. Especially in a disaster situati
 
    Builde a intranet and Provide own web service in disaster area.
 
-   Experiment of data transfer rate and data size
+   Providing other services to rescuers and victims for efficient service of the network.
 
 
 
@@ -101,7 +101,7 @@ Thanks go to these wonderful people :
        -siontama@gmail.com
        -https://github.com/Yaminyam
        
-    🎅🏻Pilkyo Kim
+    🐾Pilkyo Kim
        -Jeju National University
        -Major in Computer Education
        -masterpil@jejunu.ac.kr
