@@ -72,11 +72,11 @@ A loss of communication network is a big issue. Especially in a disaster situati
 #### Environment Setting
 
 ```
-✔️서버 os
-✔️라즈베리파이 종류
-✔️라우터
-✔️안테나
-✔️ap
+✔Ubiquiti AM-V5G-Ti 
+✔️Raspberry Pi 4 Model B
+✔️Ubuntu 21.10 server
+✔️Raspberry Pi 3 Model B
+✔️Raspberry Pi OS lite 64bit
 ```
 
 #### new-wave Web UI is built with
