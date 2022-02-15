@@ -10,13 +10,9 @@ A loss of communication network is a big issue. Especially in a disaster situati
 
 -------need to be update------------
 
--In terms of theme
+   Builde a intranet and Provide own web service in disaster area.
 
-   Builde a intranet and Provide own web service.
-
--In terms of paper
-
-   Optimal height xperiment by coverage according to height and transmission speed
+   Experiment of data transfer rate and data size
 
 
 
