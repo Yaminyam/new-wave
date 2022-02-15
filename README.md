@@ -6,6 +6,11 @@ Establishment Wireless Intranet Network and Development Web Application for Disa
 
 <img width="454" alt="image" src="https://user-images.githubusercontent.com/96998861/153928587-075d5f57-6551-43a3-bc1e-b455fd256bee.png">
 
+### application System Overview (Raspberry Pi)
+
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/96998861/153987080-c719e801-1b82-4801-80cb-8cf35b151ac3.png">
+
+
 ## 📌 Role
 
 #### new-wave focuses to...
