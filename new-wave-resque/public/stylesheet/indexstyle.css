@@ -20,16 +20,6 @@
       color: white;
     }
 
-    .sosButton{
-      border-radius: 30px;
-      font-size: 30px;
-      margin-left: 95px;
-      padding-left: 10px;
-      padding-right: 10px;
-      background-color: #b01e1e;
-      border-color: #b01e1e;
-    }
-
     .navgar{
       display: flex;
       justify-content: space-between;
@@ -40,7 +30,7 @@
 
     .navbar_logo{
       padding-top: 10px;
-      margin-left: -10px;
+      margin-left: 10px;
       font-size: 40px;
       color: white;
     }
@@ -52,7 +42,9 @@
     }
 
     .navbar_menu li{
-      padding: 20px 100px;
+      padding: 20px 120px;
+      margin-left: 5px;
+      margin-right: 5px;
     }
 
     .navbar_menu li:hover{
@@ -72,17 +64,20 @@
       .navgar{
         flex-direction: column;
         align-items: flex-start;
+        text-align: center;
         padding: 8px 24px;
       }
 
       .navbar_menu{
         flex-direction: column;
         align-items: center;
+        text-align: center;
         width: 100%
       }
 
       .navbar_menu li{
         width: 100%;
+        align-items: center;
         text-align: center;
       }
     }

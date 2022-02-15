@@ -47,7 +47,7 @@ map.locate({ setView: true, maxZoom: 16 });
 
 // Add event to button
 alarm.addEventListener('click', () => {
-  //일단 alert라는 이름의 아무것도 없는 정보 서버에 보내기
+  // 일단 alert라는 이름의 아무것도 없는 정보 서버에 보내기
   console.log('1');
   socket.emit('alertNotification','click');
 });
@@ -55,7 +55,7 @@ alarm.addEventListener('click', () => {
 socket.on('alert',notifyMe);
 // On click, execute sos button
 function notifyMe() {
-  
+
 	if (!("Notification" in window)) {
 	  alert("This browser does not support desktop notification");
 	}

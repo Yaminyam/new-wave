@@ -468,7 +468,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	/* 글자 */
 	color: #000;
 	/* 말풍선 그림자 */
-	box-shadow: 0 3px 14px rgba(255, 255, 255, 0.4);
+	box-shadow: 0 3px 14px rgba(0, 0, 0, 0.1);
 	}
 
 .leaflet-container a.leaflet-popup-close-button {
@@ -596,10 +596,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-right-color: #fff;
 	}
 
-	page-map {
+.sosButton{
+	border-radius: 30px;
+	font-size: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #b01e1e;
+	border-color: #b01e1e;
+	margin-right: 1330px;
+	margin-bottom: 555px;
+	}
+
+	.sosButton:hover{
+			background: black;
+	}
+
+	/* page-map {
 	  @font-face {
-	    font-family: 'Minecraft';
-	    src: url('../assets/Minecraft.ttf')
 	    }
 	    .button-action{
 	      height: 40px;
@@ -614,4 +627,4 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	  .button-action:hover{
 	      background: black;
 	  }
-	}
+	} */
