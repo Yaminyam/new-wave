@@ -2,11 +2,11 @@
 
 Establishment Wireless Intranet Network and Development Web Application for Disaster Areas  Using Balloons
 
-# Problem
+## 📔 Problem
 
 A loss of communication network is a big issue. Especially in a disaster situation. Because Lack of communication can make relief bound limited. Therefore, we are going to build an intranet using a drone and make own communication program. It can make wireless communication network provided to disaster areas.
 
-# Novelty
+## 🗝 Novelty
 
 -------need to be update------------
 
@@ -14,7 +14,7 @@ A loss of communication network is a big issue. Especially in a disaster situati
 
    Providing other services to rescuers and victims for efficient service of the network.
 
-
+## 📺 Overview
 
 ### Network System Overview
 
@@ -69,6 +69,15 @@ A loss of communication network is a big issue. Especially in a disaster situati
 
 ## 💡 Setup Guide
 
+#### Environment Setting
+
+```
+✔️서버 os
+✔️라즈베리파이 종류
+✔️라우터
+✔️안테나
+✔️ap
+```
 
 #### new-wave Web UI is built with
  * `npm` as package manager
