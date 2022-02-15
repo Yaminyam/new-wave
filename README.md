@@ -26,7 +26,7 @@ A loss of communication network is a big issue. Especially in a disaster situati
 
 
 
-### application System Overview (Raspberry Pi)
+### Application System Overview (Raspberry Pi)
 
    <img width="454" alt="image" src="https://user-images.githubusercontent.com/96998861/153987080-c719e801-1b82-4801-80cb-8cf35b151ac3.png">
 
