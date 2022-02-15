@@ -2,13 +2,33 @@
 
 Establishment Wireless Intranet Network and Development Web Application for Disaster Areas  Using Balloons
 
+# Problem
+
+A loss of communication network is a big issue. Especially in a disaster situation. Because Lack of communication can make relief bound limited. Therefore, we are going to build an intranet using a drone and make own communication program. It can make wireless communication network provided to disaster areas.
+
+# Novelty
+
+-------need to be update------------
+
+-In terms of theme
+
+   Builde a intranet and Provide own web service.
+
+-In terms of paper
+
+   Optimal height xperiment by coverage according to height and transmission speed
+
+
+
 ### Network System Overview
 
-<img width="454" alt="image" src="https://user-images.githubusercontent.com/96998861/153928587-075d5f57-6551-43a3-bc1e-b455fd256bee.png">
+   <img width="454" alt="image" src="https://user-images.githubusercontent.com/96998861/153928587-075d5f57-6551-43a3-bc1e-b455fd256bee.png">
+
+
 
 ### application System Overview (Raspberry Pi)
 
-<img width="454" alt="image" src="https://user-images.githubusercontent.com/96998861/153987080-c719e801-1b82-4801-80cb-8cf35b151ac3.png">
+   <img width="454" alt="image" src="https://user-images.githubusercontent.com/96998861/153987080-c719e801-1b82-4801-80cb-8cf35b151ac3.png">
 
 
 ## 📌 Role
