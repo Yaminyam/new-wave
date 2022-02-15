@@ -1,11 +1,7 @@
-//import { Socket } from "socket.io";
-var socket = io();
-
 var messages = document.getElementById('msg');
 var gps = document.getElementById('map');
 var page = document.getElementById('page');
 var video = document.getElementById('video');
-
 
 
 // On click, change page
@@ -47,10 +43,10 @@ video.addEventListener('click', function (e) {
 // 	console.log('send alert message to server');
 // 	socket.on('ReceiveAlert',notifyMe())
 
-	// else if (Notification.permission !== "denied") {
-	//   Notification.requestPermission().then(function (permission) {
-	// 	if (permission === "granted") {
-	// 	  var notification = new Notification("Someone needs help!");
-	// 	}
-	//   });
-	// }
+// 	else if (Notification.permission !== "denied") {
+// 	  Notification.requestPermission().then(function (permission) {
+// 		if (permission === "granted") {
+// 		  var notification = new Notification("Someone needs help!");
+// 		}
+// 	  });
+// 	}

@@ -7,7 +7,6 @@ var roomsName = {};
   res.redirect(`chat/${uuidV4()}`);
 });*/
 
-//채팅방 이름 설정
 // Set chat room name
 router.get("/", (req, res) => {
   var io = req.app.get("io");
@@ -27,7 +26,6 @@ router.get("/", (req, res) => {
 });
 
 
-//채팅방 생성
 // Create chat room
 router.get("/createroom", (req, res) => {
   var roomId = uuidV4();
@@ -36,7 +34,6 @@ router.get("/createroom", (req, res) => {
   res.redirect(`${roomId}`);
 });
 
-//채팅방 html과 연결
 // Connect to chat.html
 router.get("/:room", (req, res) => {
   res.render("chat.html", {
