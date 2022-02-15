@@ -8,8 +8,6 @@ A loss of communication network is a big issue. Especially in a disaster situati
 
 ## 🗝 Novelty
 
--------need to be update------------
-
    Builde a intranet and Provide own web service in disaster area.
 
    Providing other services to rescuers and victims for efficient service of the network.
