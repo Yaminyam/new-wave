@@ -61,7 +61,7 @@ io.on("connection", (socket) => {
   socket.on("join-room-video", (roomId, userId) => {
     socket.join(roomId);
     socket.to(roomId).emit("user-connected", userId);
-    console.log(getActiveRooms(io));
+  console.log(getActiveRooms(io));
     socket.on("disconnect", () => {
       socket.to(roomId).emit("user-disconnected", userId);
     });
