@@ -595,3 +595,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	margin-left: -12px;
 	border-right-color: #fff;
 	}
+
+	page-map {
+	  @font-face {
+	    font-family: 'Minecraft';
+	    src: url('../assets/Minecraft.ttf')
+	    }
+	    .button-action{
+	      height: 40px;
+	      width: 200px;
+	      text-decoration: none;
+	      text-align: center;
+	      color: white;
+	      font-family: Minecraft;
+	      line-height: 26px;
+	      padding-top: 6px;
+	  }
+	  .button-action:hover{
+	      background: black;
+	  }
+	}

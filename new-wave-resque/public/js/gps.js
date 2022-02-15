@@ -55,6 +55,7 @@ alarm.addEventListener('click', () => {
 socket.on('alert',notifyMe);
 // On click, execute sos button
 function notifyMe() {
+  
 	if (!("Notification" in window)) {
 	  alert("This browser does not support desktop notification");
 	}
@@ -74,4 +75,3 @@ function notifyMe() {
 	  });
 	}
 }
-
