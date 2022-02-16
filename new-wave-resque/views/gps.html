@@ -16,23 +16,18 @@
 <!-- Map div element to be displayed on the screen -->
 <!-- 화면에 보여질 맵 div 요소-->
 
-<!-- <div id='map'></div> -->
+
 <ion-content padding scrollbar-y-auto>
-  <div id="map" style="width: 100%; height: 100%"></div>
   <div class="leaflet-bottom leaflet-right">
     <button id='alarm' class='sosButton' block>SOS</button>
-    <script>
-    function change_color(){
-      console.log("hello");
-    }
-    </script>
   </div>
-</ion-content>
+ </ion-content>
 
 <!-- <div>
   <button id='alarm' class='sosButton'>SOS</button>
 </div> -->
-
+<div id='map'></div>
+<div id="map" style="width: 100%; height: 100%"></div>
 <script src='/socket.io/socket.io.js'></script>
 <script src='/js/gps.js'></script>
 </body>
