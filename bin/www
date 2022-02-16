@@ -43,6 +43,18 @@ io.on("connection", (socket) => {
   socket.on("gpsNewUser", (location) => {
     console.log("gpsNewUser");
     socket.broadcast.emit("gpsNewUser", location);
+    // socket.on('gps_ID', (name) => {
+    //   console.log('send gps name')
+    //     socket.broadcast.emit('gps_ID');
+    // });
+    // socket.on("alertNotification", (alertdd) => {
+    //   console.log("send alert notification");
+    //   socket.broadcast.emit("alert");
+    // });
+    // socket.on("colorChange", (alertdd) => {
+    //   console.log("color change");
+    //   socket.broadcast.emit("alert");
+    // });
   });
   socket.on("join-room-chat", (roomName) => {
     socket.join(roomName);
@@ -58,13 +70,13 @@ io.on("connection", (socket) => {
     console.log('send gps name')
       socket.broadcast.emit('gps_ID');
   });
-  socket.on("alertNotification", (df) => {
+  socket.on("alertNotification", (alertdd) => {
     console.log("send alert notification");
-    socket.emit("alert");
+    socket.broadcast.emit("alert");
   });
-  socket.on("colorChange", (df) => {
+  socket.on("colorChange", (alertdd) => {
     console.log("color change");
-    socket.emit("alert");
+    socket.broadcast.emit("alert");
   });
   socket.on("join-room-video", (roomId, userId) => {
     socket.join(roomId);

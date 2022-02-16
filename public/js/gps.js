@@ -29,7 +29,7 @@ socket.on('connect', function () {
   socket.emit('gps_ID', { name: name });
 });
 
-socket.on('gps_ID', onLocationFound)
+socket.on('gps_ID', onLocationFound);
 
 // Register event when server found user's location
 function onLocationFound(e) {
@@ -46,7 +46,7 @@ map.on('locationfound', onLocationFound);
 // Receive new user information
 // Mark a location
 socket.on('gpsNewUser', function (latlng) {
-  L.marker(latlng).addTo(map).bindPopup('name123').openPopup();
+  L.marker(latlng).addTo(map).bindPopup(name).openPopup();
 });
 
 // Register event when server couldn't find user's location
