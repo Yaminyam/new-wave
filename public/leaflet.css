@@ -599,16 +599,19 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .sosButton{
 	border-radius: 30px;
 	font-size: 30px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 550px;
+	padding-right: 550px;
+	display: flex;
+	align-items: center;
+	margin: auto;
+	margin-bottom: 10px;
 	background-color: #b01e1e;
 	border-color: #b01e1e;
-	margin-right: 1330px;
-	margin-bottom: 555px;
 	}
 
 	.sosButton:hover{
-			background: black;
+			background: #d49466;
+			border-color: #d49466;
 	}
 
 	/* page-map {
