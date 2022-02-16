@@ -467,6 +467,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	background: white;
 	/* 글자 */
 	color: #000;
+	text-align: center;
+	font-size: 15px;
 	/* 말풍선 그림자 */
 	box-shadow: 0 3px 14px rgba(0, 0, 0, 0.1);
 	}
@@ -608,6 +610,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	background-color: #b01e1e;
 	border-color: #b01e1e;
 	}
+
+/* (+) 버튼 사이즈 변경 */
 
 	.sosButton:hover{
 			background: #d49466;

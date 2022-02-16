@@ -63,9 +63,13 @@ alarm.addEventListener('click', () => {
   //일단 alert라는 이름의 아무것도 없는 정보 서버에 보내기
   console.log('1');
   socket.emit('alertNotification','click');
+  console.log('2');
+  socket.emit('colorChange','click');
 });
 
 socket.on('alert',notifyMe);
+socket.on('alert',colorChange);
+
 // On click, execute sos button
 function notifyMe() {
 	if (!("Notification" in window)) {
@@ -88,3 +92,17 @@ function notifyMe() {
 	}
 }
 
+function colorChange(){
+  console.log('5');
+  const collection = document.getElementsByClassName("leaflet-popup-content-wrapper");
+  for (let i = 0; i < collection.length; i++) {
+    collection[i].style.backgroundColor = "red";
+  }
+  const element = document.getElementsByClassName("leaflet-popup-tip");
+  for (let i = 0; i < collection.length; i++) {
+    element[i].style.backgroundColor = "red";
+  }
+  // const collection = document.getElementsByClassName('leaflet-popup-tip');
+  // collection.style.backgroundColor="red";
+  // .leaflet-popup-tip.style.background = red;
+}
