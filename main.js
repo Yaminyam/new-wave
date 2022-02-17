@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var gpsRouter = require('./routes/gps');
 var chatRouter = require('./routes/chat');
 var videoRouter = require('./routes/video');
+var usersRouter = require('./routes/users');
 
 const sequelize = require('./database');
 const session = require('express-session');
@@ -42,6 +43,7 @@ app.use('/', indexRouter);
 app.use('/gps', gpsRouter);
 app.use('/chat', chatRouter);
 app.use('/video', videoRouter);
+app.use('/users', usersRouter);
 
 // Make static folder, chat room functon
 
