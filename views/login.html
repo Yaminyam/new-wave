@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+		body
+		{
+		    margin: 0;
+		    padding: 0;
+		    background-color:#0b1a41;
+        font-size: 25px;
+		}
+		.login{
+		        width: 420px;
+            height: 200px;
+		        overflow: hidden;
+		        margin: auto;
+            margin-top: -50px;
+		        padding: 50px;
+		        background: #d49466;
+		        border-radius: 15px ;
+		}
+		h1{
+		    text-align: center;
+		    color: #ffffff;
+		    padding: 35px;
+		}
+		label{
+		    color: #0b1a41;
+		    font-size: 18px;
+		}
+		#Uname{
+		    width: 400px;
+		    height: 30px;
+		    border: none;
+		    border-radius: 3px;
+		    padding-left: 7px;
+        padding-right: 7px;
+        align-items: center;
+		}
+		#Pass{
+		    width: 400px;
+		    height: 30px;
+		    border: none;
+		    border-radius: 3px;
+		    padding-left: 7px;
+        padding-right: 7px;
+		}
+		#log{
+		    width: 413px;
+		    height: 30px;
+		    border: none;
+		    border-radius: 17px;
+		    padding-left: 7px;
+        padding-right: 7px;
+		    color: #0b1a41;
+        font-size: 15px;
+        background-color: #acafbd;
+		}
+		span{
+		    color: white;
+		    font-size: 17px;
+		}
+		a{
+		    float: right;
+		    background-color: grey;
+		}
+
+    #log:hover{
+      background-color: #0b1a41;
+      color: #ffffff;
+    }
+
+		</style>
+
+</head>
+<body>
+    <!-- <img src='images/LOGO.png' width='295.2' height='58.4'> -->
+    <h1>Welcome New Wave</h1><br>
+    <div class="login">
+    <form id="login" method="get" action="login.php">
+        <label><b>User Name
+        </b><br>
+        </label>
+        <input type="text" name="Uname" id="Uname" placeholder="Username">
+        <br><br>
+        <label>
+        <b>Password
+        </b>
+        </label>
+        <br>
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">
+        <br><br>
+        <input type="button" name="log" id="log" value="LOGIN">
+        <br><br>
+        <br><br>
+    </form>
+</div>
+</body>
+</html>
