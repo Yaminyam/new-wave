@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Yaminyam/new-wave#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.1",
     "connect-session-sequelize": "^7.1.2",
     "cookie-parser": "^1.4.6",
