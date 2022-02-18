@@ -66,9 +66,9 @@ io.on("connection", (socket) => {
       socket.to(roomName).emit("user-disconnected");
     });
   });
-  socket.on('gps_ID', (name) => {
-    console.log('send gps name')
-      socket.broadcast.emit('gps_ID');
+  socket.on("gps_ID", (name) => {
+    console.log("send gps name");
+    socket.broadcast.emit("gps_ID");
   });
   socket.on("alertNotification", (alertdd) => {
     console.log("send alert notification");
@@ -81,7 +81,6 @@ io.on("connection", (socket) => {
   socket.on("join-room-video", (roomId, userId) => {
     socket.join(roomId);
     socket.to(roomId).emit("user-connected", userId);
-  console.log(getActiveRooms(io));
     socket.on("disconnect", () => {
       socket.to(roomId).emit("user-disconnected", userId);
     });
