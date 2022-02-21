@@ -3,7 +3,7 @@ var rooms = document.getElementById('rooms');
 
 // Create videorooms
 createRoom.addEventListener('click', function (e) {
-  var roomName = prompt('방이름을 입력하시오.', '');
+  var roomName = prompt('set your room name', '');
   if (!roomName) {
     roomName = 'anonymity';
   }
