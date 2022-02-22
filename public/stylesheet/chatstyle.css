@@ -13,7 +13,6 @@ body {
 			display: flex;
 			height: 3rem;
 			box-sizing: border-box;
-			backdrop-filter: blur(10px);
 		}
 
 		#input {

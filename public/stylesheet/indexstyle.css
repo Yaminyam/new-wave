@@ -29,10 +29,10 @@
     }
 
     .navbar_logo{
-      padding-top: 10px;
-      margin-left: 10px;
       font-size: 40px;
       color: white;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
 
     .navbar_menu{
@@ -42,9 +42,10 @@
     }
 
     .navbar_menu li{
-      padding: 20px 120px;
-      margin-left: 5px;
-      margin-right: 5px;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     .navbar_menu li:hover{
@@ -64,6 +65,7 @@
       .navgar{
         flex-direction: column;
         align-items: flex-start;
+        align-items: center;
         text-align: center;
         padding: 8px 24px;
       }
@@ -72,7 +74,6 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 100%
       }
 
       .navbar_menu li{

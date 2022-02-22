@@ -30,25 +30,28 @@ body {
 		  border-radius: 5px;
 		}
 
-    .buttonStyle {
-      background-color: #0b1a41;
-      border: none;
-      color: #ffffff;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 1em;
-      font-size: 15px;
-      line-height: 1em;
-      margin: 10px 50px;
-      outline: none;
-      padding: 12px 40px 10px;
-      position: relative;
+		.buttonStyle{
+			background-color: #0b1a41;
+			border: none;
+			color: #ffffff;
+			font-size: 15px;
+			padding: 10px 10px 10px 10px;
+			align-items: center;
+			display: flex;
+			margin: auto;
+			font-weight: 700;
+			outline: none;
+			line-height: 1em;
+			position: relative;
       text-transform: uppercase;
       font-weight: 700;
-    }
+			cursor: pointer;
+			border-color: #0b1a41;
+		}
+
     .buttonStyle:before,
     .buttonStyle:after {
-      border-color: transparent;
+      border-color: #0b1a41;
       -webkit-transition: all 0.25s;
       transition: all 0.25s;
       border-style: solid;
@@ -75,6 +78,7 @@ body {
     .buttonStyle:hover,
     .buttonStyle.hover {
       background-color: #d49466;
+			border-color: #d49466;
     }
     .buttonStyle:hover:before,
     .buttonStyle.hover:before,
