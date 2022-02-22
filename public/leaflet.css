@@ -611,13 +611,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-color: #b01e1e;
 	}
 
-/* (+) 버튼 사이즈 변경 */
-
-	.sosButton:hover{
-			background: #d49466;
-			border-color: #d49466;
+.sosButton:hover{
+		background: #d49466;
+		border-color: #d49466;
+}
+  @media screen and (max-width: 768px){
+		.sosButton{
+			padding-left: 115px;
+			padding-right: 115px;
+		}
 	}
-
 	/* page-map {
 	  @font-face {
 	    }

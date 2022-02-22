@@ -19,6 +19,7 @@
 		        padding: 50px;
 		        background: #d49466;
 		        border-radius: 15px ;
+            box-shadow: 5px 5px 5px;
 		}
 		h1{
 		    text-align: center;
@@ -71,12 +72,30 @@
       color: #ffffff;
     }
 
+    @media screen and (max-width: 768px){
+      .login{
+        width: 270px;
+        height: 220px;
+      }
+
+      #Uname{
+        width: 250px;
+      }
+
+      #Pass{
+        width: 250px;
+      }
+
+      #log{
+        width: 260px;
+      }
+    }
 		</style>
 
 </head>
 <body>
     <!-- <img src='images/LOGO.png' width='295.2' height='58.4'> -->
-    <h1>Welcome New Wave</h1><br>
+    <h1>Welcome<br>New Wave</h1><br>
     <div class="login">
     <form id="login" method="get" action="login.php">
         <label><b>User Name
