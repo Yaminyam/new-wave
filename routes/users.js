@@ -3,7 +3,7 @@ var router = express.Router();
 const User = require("../model/User");
 const bcrypt = require("bcryptjs");
 
-//회원가입
+// Sign in
 router.post("/", async (req, res, next) => {
   let { password, email } = req.body;
   try {
@@ -21,7 +21,7 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-//로그인
+// Login
 router.post("/login", async (req, res, next) => {
   let { password, email } = req.body;
   try {
@@ -47,7 +47,7 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-//유저들조회
+//Users tracking
 router.get("/", async (req, res, next) => {
   try {
     const users = await User.findAll();
@@ -66,7 +66,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-//유저조회
+// User tracking
 router.get("/:id", async (req, res, next) => {
   const paramId = req.params.id;
   try {
@@ -84,7 +84,7 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-//로그아웃
+// Logout
 router.delete("/logout", async (req, res, next) => {
   try {
     if (req.session.isLoggedIn == true) {

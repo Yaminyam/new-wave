@@ -41,7 +41,6 @@ router.get('/:room', (req, res) => {
   });
 });
 
-//채팅방 리스트 생성
 // Make room list
 function getActiveRooms(io) {
   // Convert map into 2D list:

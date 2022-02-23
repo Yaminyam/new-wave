@@ -3,13 +3,13 @@ implement webRTC using P2P communication
 */
 
 const socket = io();
-const videogrid = document.getElementById("video-grid");
+const videogrid = document.getElementById('video-grid');
 const mypeer = new Peer(undefined, {
-  host: "/",
-  port: "3001",
+  host: '/',
+  port: '3001',
 });
 
-const myvideo = document.createElement("video");
+const myvideo = document.createElement('video');
 myvideo.muted = true;
 const peers = {};
 
@@ -22,39 +22,39 @@ navigator.mediaDevices
   .then((stream) => {
     addVideoStream(myvideo, stream);
 
-    mypeer.on("call", (call) => {
+    mypeer.on('call', (call) => {
       call.answer(stream);
-      const video = document.createElement("video");
-      call.on("stream", (userstream) => {
+      const video = document.createElement('video');
+      call.on('stream', (userstream) => {
         addVideoStream(video, userstream);
       });
     });
 
-    socket.on("user-connected", (userId) => {
+    socket.on('user-connected', (userId) => {
       connectToNewUser(userId, stream);
     });
   });
 
-// user out of the chat-room
-socket.on("user-disconnected", (userId) => {
+// User out of the chat-room
+socket.on('user-disconnected', (userId) => {
   if (peers[userId]) peers[userId].close();
 });
 
-// user connected room
-mypeer.on("open", (id) => {
-  console.log("My peer is open");
-  socket.emit("join-room-video", ROOM_ID, id);
+// User connected room
+mypeer.on('open', (id) => {
+  console.log('My peer is open');
+  socket.emit('join-room-video', ROOM_ID, id);
 });
 
-// add video to others
+// Add video to others
 function connectToNewUser(userId, stream) {
-  console.log("connectToNewUser");
+  console.log('connectToNewUser');
   const call = mypeer.call(userId, stream);
-  const video = document.createElement("video");
-  call.on("stream", (userstream) => {
+  const video = document.createElement('video');
+  call.on('stream', (userstream) => {
     addVideoStream(video, userstream);
   });
-  call.on("close", () => {
+  call.on('close', () => {
     video.remove();
   });
   peers[userId] = call;
@@ -62,9 +62,9 @@ function connectToNewUser(userId, stream) {
 
 // Video connection
 function addVideoStream(video, stream) {
-  console.log("addVideoStream");
+  console.log('addVideoStream');
   video.srcObject = stream;
-  video.addEventListener("loadedmetadata", () => {
+  video.addEventListener('loadedmetadata', () => {
     video.play();
   });
   videogrid.append(video);

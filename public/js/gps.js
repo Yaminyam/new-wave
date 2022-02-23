@@ -6,15 +6,15 @@ var alarm = document.getElementById('alarm');
 
 var name = '';
 
-L.tileLayer("/tiles/OSMPublicTransport/{z}/{x}/{y}.png", {
+L.tileLayer('/tiles/OSMPublicTransport/{z}/{x}/{y}.png', {
   attribution:
     'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
     '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
     'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
   maxZoom: 15,
   minZoom: 13,
-  //tileSize: 512,
-  //zoomOffset: -1,
+  // TileSize: 512,
+  // ZoomOffset: -1,
 }).addTo(map);
 
 // Perform when user connected
@@ -57,7 +57,7 @@ map.locate({ setView: true, maxZoom: 16 });
 
 // Add event to button
 alarm.addEventListener('click', () => {
-  //일단 alert라는 이름의 아무것도 없는 정보 서버에 보내기
+  // 일단 alert라는 이름의 아무것도 없는 정보 서버에 보내기
   console.log('1');
   socket.emit('alertNotification','click');
   console.log('2');

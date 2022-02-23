@@ -610,31 +610,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	background-color: #b01e1e;
 	border-color: #b01e1e;
 	}
-
+	
 .sosButton:hover{
 		background: #d49466;
 		border-color: #d49466;
 }
-  @media screen and (max-width: 768px){
-		.sosButton{
-			padding-left: 115px;
-			padding-right: 115px;
-		}
+
+@media screen and (max-width: 768px){
+	.sosButton{
+		padding-left: 115px;
+		padding-right: 115px;
 	}
-	/* page-map {
-	  @font-face {
-	    }
-	    .button-action{
-	      height: 40px;
-	      width: 200px;
-	      text-decoration: none;
-	      text-align: center;
-	      color: white;
-	      font-family: Minecraft;
-	      line-height: 26px;
-	      padding-top: 6px;
-	  }
-	  .button-action:hover{
-	      background: black;
-	  }
-	} */
+}
